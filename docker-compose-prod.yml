@@ -1,0 +1,9 @@
+services:
+  headcount:
+    image: arnobchanda/headcount_system:latest
+    container_name: bus-headcount
+    restart: unless-stopped
+    ports:
+      - "5001:5001"
+    environment:
+      - PYTHONUNBUFFERED=1

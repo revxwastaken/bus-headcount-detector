@@ -1,0 +1,15 @@
+services:
+  headcount:
+    build: .
+    container_name: bus-headcount
+    restart: unless-stopped
+    privileged: true
+    # devices:
+    #   - /dev/video0:/dev/video0
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./models:/app/models
+    environment:
+      # - CAMERA_INDEX=10
+      - PYTHONUNBUFFERED=1
