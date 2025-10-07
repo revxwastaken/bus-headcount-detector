@@ -31,4 +31,4 @@ COPY headcount_main.py .
 EXPOSE 5001
 
 # Run the application
-CMD ["python", "headcount_main.py", "--web", "--camera", "0", "--host", "0.0.0.0", "--port", "5001"]
+CMD ["python", "headcount_main.py", "--web", "--camera", "rtsp://192.168.1.47:8556/cam", "--host", "0.0.0.0", "--port", "5001"]

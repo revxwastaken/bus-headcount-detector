@@ -67,8 +67,8 @@ def try_camera_sources():
     #             test_source = source
 
     # Try to open camera
-    camera_ip = "192.168.50.111"
-    rtsp_url = f"rtsp://admin:root%40ReVx@{camera_ip}/Streaming/Channels/101"
+    camera_ip = "192.168.1.47"
+    rtsp_url = f"rtsp://{camera_ip}:8556/cam"
     cap = cv2.VideoCapture(rtsp_url)
     if cap.isOpened():
         # Test read
